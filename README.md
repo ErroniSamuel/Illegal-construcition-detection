@@ -47,9 +47,21 @@ A Flask web application that detects illegal buildings using satellite imagery a
    - Open `app.py` and set the following:
      - Line 10: Set your own secret key for the Flask application
      - Line 17: Add your Gmail address for sending alerts
-     - Line 18: Add your 16-digit Google app password (Generate this in your Google Account settings)
+     - Line 18: Add your 16-digit Google app password (see instructions below)
      - Line 44: Update the admin email address that will receive alerts
      - Line 51: Update the sender email to match your Gmail address
+
+   ### Creating a Google App Password
+   1. Go to your Google Account settings: https://myaccount.google.com/
+   2. Select "Security" from the left navigation panel
+   3. Under "Signing in to Google", select "2-Step Verification" and verify your identity
+   4. At the bottom of the page, select "App passwords"
+   5. Click "Select app" and choose "Other (Custom name)"
+   6. Enter "flask app" as the name
+   7. Click "Generate"
+   8. Google will display a 16-digit password - copy this password
+   9. Paste this password in app.py line 18 as your MAIL_PASSWORD value
+   10. Note: Store this password securely as Google will only show it once
 
 5. Run the application
    ```
@@ -68,14 +80,4 @@ The repository includes training and testing images in the `imgs/` directory. If
    python train_model.py
    ```
 
-This will create a new model file that you can use instead of the provided `best_model.keras`.
-
-## Note on Large Files
-
-This repository uses Git Large File Storage (LFS) to handle the large model file. If you're cloning this repository, make sure you have Git LFS installed on your system:
-
-```
-git lfs install
-```
-
-Then you can clone the repository normally and Git LFS will automatically handle downloading the large files. 
+This will create a new model file that you can use instead of the provided `best_model.keras`. 
