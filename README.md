@@ -43,12 +43,20 @@ A Flask web application that detects illegal buildings using satellite imagery a
    python create_db.py
    ```
 
-4. Run the application
+4. Configure email notifications and app secrets
+   - Open `app.py` and set the following:
+     - Line 10: Set your own secret key for the Flask application
+     - Line 17: Add your Gmail address for sending alerts
+     - Line 18: Add your 16-digit Google app password (Generate this in your Google Account settings)
+     - Line 44: Update the admin email address that will receive alerts
+     - Line 51: Update the sender email to match your Gmail address
+
+5. Run the application
    ```
    python app.py
    ```
 
-5. Access the application at http://localhost:5000
+6. Access the application at http://localhost:5000
 
 ## Training Your Own Model
 

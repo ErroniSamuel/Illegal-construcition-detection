@@ -8,14 +8,14 @@ import os
 import requests  # For downloading satellite images
 
 app = Flask(__name__)
-app.secret_key = 'zmihtrwoajsrjvyc'  # Secret key still needed for flash messages
+app.secret_key = 'your_secret_key_here'  # Replace with your own secret key
 
 # Flask Mail Configuration for Email Alerts
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'erronisam10@gmail.com'
-app.config['MAIL_PASSWORD'] = 'zmihtrwoajsrjvyc'
+app.config['MAIL_USERNAME'] = ''  # Add your email address here
+app.config['MAIL_PASSWORD'] = ''  # Add your 16-digit Google app password here
 mail = Mail(app)
 
 # Load the trained model
@@ -42,14 +42,14 @@ def location_exists(latitude, longitude):
     return result is not None
 
 def send_admin_alert(location):
-    admin_emails = ['245121737303@mvsrec.edu.in']  # Admin email directly set in code
+    admin_emails = ['your_admin_email@example.com']  # Replace with your admin email
 
     subject = "🚨 Illegal Building Detected!"
     body = f"An illegal building was detected at location: {location}."
 
     for admin_email in admin_emails:
         try:
-            msg = Message(subject, sender='erronisam10@gmail.com', recipients=[admin_email])
+            msg = Message(subject, sender='your_email@example.com', recipients=[admin_email])
             msg.body = body
             mail.send(msg)
             print(f"✅ Admin alert sent successfully to {admin_email}.")
