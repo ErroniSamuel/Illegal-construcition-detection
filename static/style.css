@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle, #2fafd6, #1a1a1a);
+  color: white;
+  overflow: hidden;
+}
+
+/* Glowing Heading */
+.glowing-text {
+  font-size: 24px;
+  text-transform: uppercase;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Container */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  width: 400px;
+  animation: fadeIn 1s ease-in-out, floatUpDown 3s infinite alternate ease-in-out;
+  position: relative;
+}
+
+/* File Input */
+.file-input {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+input:focus {
+  border-color: #00ffcc;
+  transform: scale(1.05);
+}
+
+/* Preview Image */
+.preview {
+  margin-top: 10px;
+}
+
+#imagePreview {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+  animation: zoomIn 0.7s ease-in-out;
+}
+
+/* Button */
+.upload-btn {
+  background: linear-gradient(90deg, #ff0080, #ff6600);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.upload-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff6600, #ff0080);
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+  from {
+      transform: translateY(5px);
+  }
+  to {
+      transform: translateY(-5px);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+  to { text-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Default Background */
+.default-bg {
+  background: linear-gradient(45deg, #141E30, #243B55);
+}
+
+/* Legal Location - Green Background */
+.legal-bg {
+  background: linear-gradient(45deg, #7be68d, #72f884) !important;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Illegal Location - Red Background */
+.illegal-bg {
+  background: linear-gradient(45deg, #f34e4e, #f05656) !important;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Result container */
+.result-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  width: 400px;
+  animation: fadeIn 1s ease-in-out;
+  margin: 100px auto;
+}
+
+/* Result Box */
+.result-box {
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.result-box p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #FF512F, #DD2476);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+/* Warning Background - Yellow for illegal empty locations */
+.warning-bg {
+  background: linear-gradient(45deg, #bba110, #ebdd44) !important;
+  transition: background 0.5s ease-in-out;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #DD2476, #FF512F);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

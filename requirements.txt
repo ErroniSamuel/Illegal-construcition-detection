@@ -1,0 +1,7 @@
+Flask
+Flask-Mail
+tensorflow
+numpy
+pillow
+requests
+gunicorn

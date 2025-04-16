@@ -1,0 +1,35 @@
+# Ignore dataset
+Dataset-for-illegal-buildings-detection-from-satellite/
+
+# Ignore large model files
+*.keras
+*.h5
+
+# Ignore database file
+*.db
+
+# Ignore uploaded images
+uploads/
+
+# Ignore training script
+train_model.py
+
+# Ignore training images
+imgs/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore environment files
+.env
+venv/
+env/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Dockerfile
+Dockerfile 
