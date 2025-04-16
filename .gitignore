@@ -9,7 +9,13 @@ Dataset-for-illegal-buildings-detection-from-satellite/
 *.db
 
 # Ignore uploaded images
-uploads/
+# uploads/  # Including uploads folder
+
+# Ignore training script
+train_model.py
+
+# Ignore training images
+# imgs/  # Including training and testing images
 
 # Ignore Python cache files
 __pycache__/

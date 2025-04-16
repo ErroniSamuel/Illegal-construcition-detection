@@ -18,6 +18,12 @@ A Flask web application that detects illegal buildings using satellite imagery a
 - `templates/`: HTML templates for the web interface
 - `static/`: CSS files for styling
 - `best_model.keras`: Pre-trained model for building detection (stored using Git LFS)
+- `imgs/`: Contains training and testing images for the model
+  - `imgs/train/building/`: Training images of buildings
+  - `imgs/train/background/`: Training images of background (non-buildings)
+  - `imgs/test/building/`: Testing images of buildings
+  - `imgs/test/background/`: Testing images of background (non-buildings)
+- `uploads/`: Directory where user-uploaded images are stored
 
 ## Setup Instructions
 
@@ -43,6 +49,18 @@ A Flask web application that detects illegal buildings using satellite imagery a
    ```
 
 5. Access the application at http://localhost:5000
+
+## Training Your Own Model
+
+The repository includes training and testing images in the `imgs/` directory. If you want to train your own model:
+
+1. Make sure you have all the dependencies installed
+2. Run the training script:
+   ```
+   python train_model.py
+   ```
+
+This will create a new model file that you can use instead of the provided `best_model.keras`.
 
 ## Note on Large Files
 
