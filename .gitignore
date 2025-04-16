@@ -2,20 +2,20 @@
 Dataset-for-illegal-buildings-detection-from-satellite/
 
 # Ignore large model files
-*.keras
+# *.keras  # Using Git LFS for these files
 *.h5
 
 # Ignore database file
 *.db
 
 # Ignore uploaded images
-uploads/
+# uploads/  # Including uploads folder
 
 # Ignore training script
 train_model.py
 
 # Ignore training images
-imgs/
+# imgs/  # Including training and testing images
 
 # Ignore Python cache files
 __pycache__/

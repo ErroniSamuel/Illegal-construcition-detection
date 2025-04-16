@@ -17,6 +17,13 @@ A Flask web application that detects illegal buildings using satellite imagery a
 - `check_location.py`: Utilities for checking if a location is legal for construction
 - `templates/`: HTML templates for the web interface
 - `static/`: CSS files for styling
+- `best_model.keras`: Pre-trained model for building detection (stored using Git LFS)
+- `imgs/`: Contains training and testing images for the model
+  - `imgs/train/building/`: Training images of buildings
+  - `imgs/train/background/`: Training images of background (non-buildings)
+  - `imgs/test/building/`: Testing images of buildings
+  - `imgs/test/background/`: Testing images of background (non-buildings)
+- `uploads/`: Directory where user-uploaded images are stored
 
 ## Setup Instructions
 
@@ -31,25 +38,36 @@ A Flask web application that detects illegal buildings using satellite imagery a
    pip install -r requirements.txt
    ```
 
-3. **Important**: You need to obtain the trained model file `best_model.keras` (295MB) separately and place it in the root directory. Contact the repository owner for access to this file.
-
-4. Initialize the database
+3. Initialize the database
    ```
    python create_db.py
    ```
 
-5. Run the application
+4. Run the application
    ```
    python app.py
    ```
 
-6. Access the application at http://localhost:5000
+5. Access the application at http://localhost:5000
 
-## Model File
+## Training Your Own Model
 
-The trained model file (`best_model.keras`, ~295MB) is not included in this repository due to GitHub's file size limitations. This file is required for the application to function properly.
+The repository includes training and testing images in the `imgs/` directory. If you want to train your own model:
 
-Options to obtain the model file:
-- Contact the repository owner for direct access
-- Train your own model using the `train_model.py` script with an appropriate dataset of satellite images
-- Download from a cloud storage link (if provided) 
+1. Make sure you have all the dependencies installed
+2. Run the training script:
+   ```
+   python train_model.py
+   ```
+
+This will create a new model file that you can use instead of the provided `best_model.keras`.
+
+## Note on Large Files
+
+This repository uses Git Large File Storage (LFS) to handle the large model file. If you're cloning this repository, make sure you have Git LFS installed on your system:
+
+```
+git lfs install
+```
+
+Then you can clone the repository normally and Git LFS will automatically handle downloading the large files. 
