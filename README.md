@@ -80,4 +80,14 @@ The repository includes training and testing images in the `imgs/` directory. If
    python train_model.py
    ```
 
-This will create a new model file that you can use instead of the provided `best_model.keras`. 
+This will create a new model file that you can use instead of the provided `best_model.keras`.
+
+## Note on Large Files
+
+This repository uses Git Large File Storage (LFS) to handle the large model file. If you're cloning this repository, make sure you have Git LFS installed on your system:
+
+```
+git lfs install
+```
+
+Then you can clone the repository normally and Git LFS will automatically handle downloading the large files. 
