@@ -2,7 +2,7 @@
 Dataset-for-illegal-buildings-detection-from-satellite/
 
 # Ignore large model files
-*.keras
+# *.keras  # Using Git LFS for these files
 *.h5
 
 # Ignore database file
