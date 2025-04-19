@@ -8,8 +8,7 @@ Dataset-for-illegal-buildings-detection-from-satellite/
 # Ignore database file
 *.db
 
-# Ignore uploaded images
-# uploads/  # Including uploads folder
+
 
 
 
